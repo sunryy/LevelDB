@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{93A5E1C6-C285-4269-82BF-4D74C88B7AE2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>LevelDBTest</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\sunryDePC\Documents\Visual Studio 2013\Projects\LevelDBTest\LevelDBTest\include;C:\Users\sunryDePC\Documents\Visual Studio 2013\Projects\LevelDBTest\LevelDBTest\;C:\public\include;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\sunryDePC\Documents\Visual Studio 2013\Projects\LevelDBTest\LevelDBTest\include;C:\Users\sunryDePC\Documents\Visual Studio 2013\Projects\LevelDBTest\LevelDBTest\;C:\public\include;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="db\dbformat.cpp" />
+    <ClCompile Include="db\dbtest.cpp" />
+    <ClCompile Include="db\db_impl.cpp" />
+    <ClCompile Include="db\filename.cpp" />
+    <ClCompile Include="db\log_writer.cpp" />
+    <ClCompile Include="db\memtable.cpp" />
+    <ClCompile Include="db\version_edit.cpp" />
+    <ClCompile Include="db\version_set.cpp" />
+    <ClCompile Include="table\block.cpp" />
+    <ClCompile Include="table\format.cpp" />
+    <ClCompile Include="table\iterator.cpp" />
+    <ClCompile Include="util\arena.cpp" />
+    <ClCompile Include="util\cache.cpp" />
+    <ClCompile Include="util\coding.cpp" />
+    <ClCompile Include="util\crc32c.cpp" />
+    <ClCompile Include="util\env.cpp" />
+    <ClCompile Include="util\env_boost.cpp" />
+    <ClCompile Include="util\logging.cpp" />
+    <ClCompile Include="util\options.cpp" />
+    <ClCompile Include="util\status.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="db\db_impl.h" />
+    <ClInclude Include="db\dbformat.h" />
+    <ClInclude Include="db\filename.h" />
+    <ClInclude Include="db\log_format.h" />
+    <ClInclude Include="db\log_writer.h" />
+    <ClInclude Include="db\memtable.h" />
+    <ClInclude Include="db\skiplist.h" />
+    <ClInclude Include="db\table_cache.h" />
+    <ClInclude Include="db\version_edit.h" />
+    <ClInclude Include="db\version_set.h" />
+    <ClInclude Include="include\leveldb\cache.h" />
+    <ClInclude Include="include\leveldb\comparator.h" />
+    <ClInclude Include="include\leveldb\db.h" />
+    <ClInclude Include="include\leveldb\env.h" />
+    <ClInclude Include="include\leveldb\iterator.h" />
+    <ClInclude Include="include\leveldb\options.h" />
+    <ClInclude Include="include\leveldb\slice.h" />
+    <ClInclude Include="include\leveldb\status.h" />
+    <ClInclude Include="include\leveldb\table.h" />
+    <ClInclude Include="include\leveldb\table_builder.h" />
+    <ClInclude Include="port\port.h" />
+    <ClInclude Include="port\port_win.h" />
+    <ClInclude Include="table\block.h" />
+    <ClInclude Include="table\format.h" />
+    <ClInclude Include="util\arena.h" />
+    <ClInclude Include="util\coding.h" />
+    <ClInclude Include="util\crc32c.h" />
+    <ClInclude Include="util\logging.h" />
+    <ClInclude Include="util\posix_logger.h" />
+    <ClInclude Include="util\random.h" />
+    <ClInclude Include="util\win_logger.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
